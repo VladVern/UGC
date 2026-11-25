@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UGC</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="conf-header">
+            <div class="conf-header-title">
+                <h1>UNIVERSAL GAME COMMANDER</h1>
+            </div>
+
+            <div class="conf-preset">
+                <h1>Selected preset: <span></span></h1>
+            </div>
+
+            <form class="conf-create">
+                <input maxlength="20" placeholder="Create preset (max 20)" required type="text">
+                <button draggable="false" type="submit"><img src="./assets/img/plus.svg" alt="Create"></button>
+            </form>
+
+            <div class="conf-header-line"></div>
+        </header>
+
+        <main class="conf-main">
+            <section class="conf-preset-select"></section>
+
+            <section class="conf-open-edit">
+                <div class="conf-open-edit-main"></div>
+                <div class="conf-open-edit-commands"></div>
+
+                <div class="conf-open-edit-commands"></div>
+            </section>
+
+            <section class="conf-save">
+                <button>Save and start</button>
+            </section>
+        </main>
+    </div>
+
+    <script src="./renderer.js"></script>
+</body>
+
+</html>

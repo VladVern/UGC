@@ -1,0 +1,497 @@
+:root {
+    --backgroung-color: #1b1d21;
+    --backgroung-header-color: #16181c;
+    --border-subtle-color: #2c2f36;
+    --background-selected-preset-color: #26272B;
+    --border-selected-preset-color: #45464B;
+
+    --backgroung-button-color: #2b2e33;
+    --backgroung-input: rgb(27, 28, 30);
+    --input-border-control: #3a3e47;
+    --input-placeholder-color: #6c727a;
+
+    --text-color: #e0e3e7;
+    --text-secondary-color: #989ea6;
+}
+
+*,
+* ::before,
+* ::after {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Open Sans", sans-serif;
+    color: var(--text-color);
+
+}
+
+html {
+    background-color: var(--backgroung-color);
+
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #15171a;
+}
+::-webkit-scrollbar-thumb {
+    background: #383b40;
+    border-radius: 10px;
+    border: 2px solid #15171a;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #50545b;
+}
+::-webkit-scrollbar-corner {
+    background: #15171a;
+}
+
+
+
+/* Header */
+.conf-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 30px;
+
+    height: 85px;
+
+    background-color: var(--backgroung-header-color);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+/* Title */
+.conf-header-title {
+    text-align: center;
+
+    width: 300px;
+}
+
+.conf-header-title h1 {
+    font-size: 22px;
+    font-weight: 300;
+}
+
+/* Selected preset */
+.conf-preset {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 300px;
+
+    text-align: center;
+    font-size: 40px;
+}
+
+.conf-preset h1 {
+    font-size: 20px;
+    font-weight: 300;
+
+    background-color: var(--background-selected-preset-color);
+
+    border: var(--border-selected-preset-color) 1px solid;
+    border-radius: 20px;
+
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+/* Create preset */
+.conf-create {
+    width: 300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.conf-create input {
+    background: var(--backgroung-input);
+
+    border: var(--input-border-control) 1px solid;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-right: none;
+
+    height: 35px;
+
+    outline: none;
+
+    font-size: 16px;
+    padding-left: 3px;
+}
+
+.conf-create input::placeholder {
+    color: var(--input-placeholder-color);
+}
+
+.conf-create button {
+    background: var(--backgroung-button-color);
+
+    border: var(--input-border-control) 1px solid;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-left: none;
+
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.conf-create img {
+    filter: invert(1);
+}
+
+/* line */
+.conf-header-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    height: 2px;
+
+    background-color: var(--border-subtle-color);
+}
+
+
+
+/* Main */
+/* Item select */
+.conf-preset-select {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-wrap: nowrap;
+    gap: 50px;
+
+    max-width: 1000px;
+    height: 100px;
+
+    overflow: auto;
+}
+
+.conf-preset-select-null {
+    color: var(--text-secondary-color);
+    
+    margin: 0 auto;
+}
+
+.conf-preset-select-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.conf-preset-select-item h1 {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+
+    background-color: var(--background-selected-preset-color);
+
+    border: var(--border-selected-preset-color) 1px solid;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-right: none;
+
+    height: 35px;
+
+    padding-left: 7px;
+    padding-right: 5px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.conf-preset-select-item button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--backgroung-button-color);
+
+    height: 35px;
+
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+
+    border: var(--border-selected-preset-color) 1px solid;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-left: none;
+
+    cursor: pointer;
+}
+
+.conf-preset-select-item button:nth-child(2) {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-right: none;
+}
+
+.conf-preset-select-item img {
+    filter: invert(1);
+}
+
+/* Edit */
+.conf-open-edit {
+    margin-top: 20px;
+}
+/* Edit main */
+.conf-open-edit-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 100%;
+
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.conf-open-edit-main-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.conf-open-edit-main-title p {
+    width: 150px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    color: var(--text-secondary-color);
+}
+
+.conf-open-edit-main-line {
+    width: 100%;
+    height: 2px;
+
+    background-color: var(--border-subtle-color);
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.conf-open-edit-main-inputs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.conf-open-edit-main-inputs input {
+    width: 150px;
+
+    background: none;
+
+    border: none;
+    border-bottom: 2px solid var(--input-border-control);
+    outline: none;
+
+    font-size: 15px;
+}
+
+/* Edit commands */
+.conf-open-edit-commands-create {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 100%;
+
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 40px;
+}
+
+.conf-open-edit-commands-create-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.conf-open-edit-commands-create-title p {
+    width: 150px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    color: var(--text-secondary-color);
+}
+
+.conf-open-edit-commands-create-line {
+    width: 100%;
+    height: 2px;
+
+    background-color: var(--border-subtle-color);
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.conf-open-edit-commands-create-inputs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.conf-open-edit-commands-create-inputs input {
+    width: 150px;
+
+    background: none;
+
+    border: none;
+    border-bottom: 2px solid var(--input-border-control);
+    outline: none;
+
+    font-size: 15px;
+}
+
+.conf-open-edit-commands-create-inputs button {
+    background-color: var(--backgroung-button-color);
+
+    width: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+    border: 1px solid var(--border-selected-preset-color);
+
+    cursor: pointer;
+}
+
+.conf-open-edit-commands-create-inputs img {
+    filter: invert(1);
+}
+/* Command item */
+.conf-open-edit-commands-commands-container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-wrap: nowrap;
+    gap: 50px;
+
+    max-width: 1000px;
+    height: 100px;
+
+    overflow: auto;
+}
+
+.conf-open-edit-commands-commands-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.conf-open-edit-commands-commands-item h1 {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+
+    background-color: var(--background-selected-preset-color);
+
+    border: var(--border-selected-preset-color) 1px solid;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-right: none;
+
+    height: 35px;
+
+    padding-left: 7px;
+    padding-right: 5px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.conf-open-edit-commands-commands-item h1:nth-child(2) {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.conf-open-edit-commands-commands-item button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--backgroung-button-color);
+
+    height: 35px;
+
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+
+    border: var(--border-selected-preset-color) 1px solid;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-left: none;
+
+    cursor: pointer;
+}
+
+.conf-open-edit-commands-commands-item img {
+    filter: invert(1);
+}
+
+/* Save */
+.conf-save {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 20px;
+}
+
+.conf-save button {
+    background: none;
+
+    padding: 5px;
+
+    border: 1px solid rgb(7, 172, 7);
+    border-radius: 10px;
+
+    color: rgb(7, 172, 7);
+
+    cursor: pointer;
+}   

@@ -1,0 +1,36 @@
+{
+    "name": "UGC",
+    "version": "1.0.0",
+    "description": "UGC - UNIVERSAL GAME COMMANDER",
+    "license": "ISC",
+    "author": "VladVern",
+    "type": "commonjs",
+    "main": "index.js",
+    "scripts": {
+        "start": "electron .",
+        "build": "electron-builder"
+    },
+    "build": {
+        "appId": "",
+        "productName": "UGC",
+        "extraResources": [
+            {
+                "from": "commander.exe",
+                "to": "../commander.exe"
+            }
+        ],
+        "win": {
+            "target": "nsis"
+        },
+        "mac": {
+            "target": "dmg"
+        },
+        "linux": {
+            "target": "AppImage"
+        }
+    },
+    "devDependencies": {
+        "electron": "^45.4.1",
+        "electron-builder": "^26.18.0"
+    }
+}
